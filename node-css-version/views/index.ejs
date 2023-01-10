@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>brick and block laying</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="We are a small family company with experience bricklaying over 12 years.
+	 We specialise in building, higher quality projects where our management and craftsmanship skills
+	 can be utilised most effectively for our clients.">
+	<meta name="keywords" content="Brickwork Blockwork masonry London, Bulgaria, extension, garden wall, garages,
+	 houses, flats, building,chimneys construction, footings, walls Flemish bond, english bond half bond arches,
+	 зидари в Англия, най добри цени, the best prices">
+	<meta name="author" content="Iani Garfalski">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="
+	default-src 'self';
+	script-src 'self';
+	style-src 'self';
+	media-src 'none'; 
+	font-src 'self';
+	connect-src 'self';
+	img-src 'self';
+	frame-src 'self';
+	">
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+
+<body>
+	<header id="header">
+		<div id="navbar">
+			<div class="logo main"><a class="nav-btn" data-target="header"><h1 class="main-title">OLYMPIA BRICKWORK</h1></a></div>
+			<a class="nav-toggle">☰</a>
+			<nav>
+				<ul>
+					<li>
+						<a class="nav-btn" id="about-us-btn" data-target="about-us">
+							<%=lang['about-us']%>
+						</a>
+					</li>
+					<li>
+						<a class="nav-btn" id="masonry-btn" data-target="masonry">
+							<%=lang['material']%>
+						</a>
+					</li>
+					<li>
+						<a class="nav-btn" id="gallery-btn" data-target="gallery">
+							<%=lang['gallery']%>
+						</a>
+					</li>
+					<li>
+						<a class="nav-btn" id="contact-us-btn" data-target="contact-us">
+							<%=lang['contact']%>
+						</a>
+					</li>
+				</ul>
+				<div class="country-flag">
+					<p>
+						<%=lang['language']%>
+					</p>
+					<img src="generic/uk-flag.png" alt="uk-language-selector" height="20" width="30" id="uk-flag">
+					<img src="generic/bg-flag.png" alt="bg-language-selector" height="20" width="30" id="bg-flag">
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="center">
+		<div id="space-break" class="space-break">
+			<div id="about-us" class="about row">
+				<div class="center about-centered col-6">
+					<h1 class="title">
+						<%=lang['about-us']%>
+					</h1>
+					<p>
+						<%=lang['about-us-text']%>
+					</p>
+				</div>
+			</div>
+			<img id="arrow-down" class="nav-btn" data-target="masonry" src="generic/arrow-down.png" href="masonry" height="50"
+				width="75" alt="arrow down">
+		</div>
+		<div id="masonry" class="masonry item row">
+			<div class="col-12">
+				<h1 class="title">
+					<%=lang['material']%>
+				</h1>
+			</div>
+			<div class="col-12 masonry-center-container-mobile">
+				<h2 class="masonry-offer">We offer the following masonry services</h2>
+			</div>
+
+			<div class="col-4">
+				<span class="masonry-item unselectable">
+					<img class="responsive" src="img/29.jpg" alt="blockwork">
+					<div class="masonry-item-centered">
+						<span>
+							<%=lang['blockwork']%>
+						</span>
+					</div>
+				</span>
+			</div>
+			<div class="col-4 masonry-center-container">
+				<h2 class="masonry-offer">We offer the following masonry services</h2>
+			</div>
+			<div class="col-4">
+				<span class="masonry-item unselectable">
+					<img class="responsive" src="img/1.jpg" alt="brickwork">
+					<div class="masonry-item-centered">
+						<span>
+							<%=lang['brickwork']%>
+						</span>
+					</div>
+				</span>
+			</div>
+		</div>
+
+		<div id="gallery" class="item gallery">
+			<h1 class="title">
+				<%=lang['gallery']%>
+			</h1>
+			<div class="row grid-container">
+				<% for(let i=0; i<imgNames.length; i++) { %>
+					<img class="img grid-item responsive" data-num="<%=[i]%>" src="img/<%=[i]%>.jpg" alt="image <%=[i]%>">
+					<% } %>
+			</div>
+		</div>
+
+		<div id="contact-us" class="item contact row">
+			<h1 class="center title col-12">
+				<%=lang['contact']%>
+			</h1>
+			<div class="col-6">
+				<ul class="contact-list">
+					<li class="list-item">
+						<h2 class="fa fa-phone fa-2x">
+							<%=lang['phone']%>:
+						</h2>
+						<span class="contact-text phone">
+							<a href="tel:07429091004" title="Give me a call">(44) 0-7429-091004</a>
+						</span>
+						</i>
+					</li>
+					<li class="list-item">
+						<h2 class="fa fa-envelope fa-2x">
+							<%=lang['email']%>:
+						</h2>
+						<a href="mailto:#" title="Send me an email">Marinov1007@abv.bg</a>
+						<br>
+						<h2 class="fa fa-envelope fa-2x">
+							<%=lang['email']%>:
+						</h2>
+						<a href="mailto:#" title="Send me an email">Feolaventsi@gmail.com</a>
+						</span>
+						</i>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="myModal" class="modal center unselectable">
+		<div class="modalImgContainer">
+			<span class="close">X</span>
+			<img id="modalImg" class="responsive">
+			<div class="left-arrow">
+				<span>&#60;</span>
+			</div>
+			<div class="right-arrow">
+				<span>&#62;</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts.js">
+
+	</script>
+</body>
+
+</html>
